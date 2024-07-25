@@ -38,12 +38,12 @@ public class Test : MonoBehaviour
         }
         else if (platform == RuntimePlatform.IPhonePlayer)
         {
-            filePath = iOSFilePath;
-            directoryPath = iOSDirectoryPath;
-            
             iOSApplicationSupportPath = IOSHelper.ConvertToApplicationSupportPath(Application.persistentDataPath);
             Debug.Log($"--- (ROOT) Application Support Directory path: {iOSApplicationSupportPath}");
             Debug.Log($"--- (ROOT) Exist Application Support? {Directory.Exists(iOSApplicationSupportPath)}");
+
+            directoryPath = iOSApplicationSupportPath;
+            filePath = $"{directoryPath}/com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
         }
     }
 
