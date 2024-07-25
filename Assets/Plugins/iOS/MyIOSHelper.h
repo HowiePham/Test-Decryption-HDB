@@ -3,11 +3,11 @@
 
 #ifdef __cplusplus
 extern "C" {
-#endif
+    #endif
 
-const char* _getApplicationSupportDirectory();
+    const char* getApplicationSupportDirectory();
 
-#ifdef __cplusplus
+    #ifdef __cplusplus
 }
 #endif
 

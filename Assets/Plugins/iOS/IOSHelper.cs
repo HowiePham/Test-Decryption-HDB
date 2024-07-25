@@ -5,13 +5,13 @@ using UnityEngine;
 public static class IOSHelper
 {
     [DllImport("__Internal")]
-    private static extern IntPtr _getApplicationSupportDirectory();
+    private static extern IntPtr getApplicationSupportDirectory();
 
     public static string GetApplicationSupportDirectory()
     {
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
-            IntPtr ptr = _getApplicationSupportDirectory();
+            IntPtr ptr = getApplicationSupportDirectory();
             return Marshal.PtrToStringAnsi(ptr);
         }
         else
