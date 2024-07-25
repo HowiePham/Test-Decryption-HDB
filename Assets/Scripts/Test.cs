@@ -29,7 +29,8 @@ public class Test : MonoBehaviour
     private void InitSystem()
     {
         var platform = Application.platform;
-
+        Debug.Log($"--- (ROOT) Current platform: {platform}");
+        
         if (platform == RuntimePlatform.Android)
         {
             filePath = androidFilePath;
