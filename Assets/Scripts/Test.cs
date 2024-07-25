@@ -14,6 +14,7 @@ public class Test : MonoBehaviour
 
     private string iOSDirectoryPath = "/Container/Library/Application Support/com.bigwigmedia.hotdogbush/Local Store";
     private string iOSFilePath = "/Container/Library/Application Support/com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
+    private string iOSApplicationSupportPath;
 
     private string directoryPath;
     private string filePath;
@@ -38,6 +39,8 @@ public class Test : MonoBehaviour
         {
             filePath = iOSFilePath;
             directoryPath = iOSDirectoryPath;
+            iOSApplicationSupportPath = IOSHelper.GetApplicationSupportDirectory();
+            Debug.Log($"--- (ROOT) Application Support Directory path: {iOSApplicationSupportPath}");
         }
     }
 
