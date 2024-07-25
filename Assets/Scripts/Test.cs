@@ -40,9 +40,10 @@ public class Test : MonoBehaviour
         {
             filePath = iOSFilePath;
             directoryPath = iOSDirectoryPath;
-            // iOSApplicationSupportPath = IOSHelper.GetApplicationSupportDirectory();
+            
             iOSApplicationSupportPath = IOSHelper.ConvertToApplicationSupportPath(Application.persistentDataPath);
             Debug.Log($"--- (ROOT) Application Support Directory path: {iOSApplicationSupportPath}");
+            Debug.Log($"--- (ROOT) Exist Application Support? {Directory.Exists(iOSApplicationSupportPath)}");
         }
     }
 
