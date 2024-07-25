@@ -75,3 +75,4 @@ crashlytics-build.properties
 Gateway.aspx.cs
 Gateway.aspx.designer.cs
 packages.config
+iOSBuild
