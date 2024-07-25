@@ -19,4 +19,10 @@ public static class IOSHelper
             return string.Empty;
         }
     }
+
+    public static string ConvertToApplicationSupportPath(string documentsPath)
+    {
+        string applicationSupportPath = documentsPath.Replace("Documents", "Library/Application Support");
+        return applicationSupportPath;
+    }
 }

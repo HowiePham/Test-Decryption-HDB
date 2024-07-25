@@ -30,7 +30,7 @@ public class Test : MonoBehaviour
     {
         var platform = Application.platform;
         Debug.Log($"--- (ROOT) Current platform: {platform}");
-        
+
         if (platform == RuntimePlatform.Android)
         {
             filePath = androidFilePath;
@@ -40,7 +40,8 @@ public class Test : MonoBehaviour
         {
             filePath = iOSFilePath;
             directoryPath = iOSDirectoryPath;
-            iOSApplicationSupportPath = IOSHelper.GetApplicationSupportDirectory();
+            // iOSApplicationSupportPath = IOSHelper.GetApplicationSupportDirectory();
+            iOSApplicationSupportPath = IOSHelper.ConvertToApplicationSupportPath(Application.persistentDataPath);
             Debug.Log($"--- (ROOT) Application Support Directory path: {iOSApplicationSupportPath}");
         }
     }
