@@ -12,8 +12,6 @@ public class Test : MonoBehaviour
     private string androidDirectoryPath = "/data/data/air.com.bigwigmedia.hotdogbush/air.com.bigwigmedia.hotdogbush/Local Store";
     private string androidFilePath = "/data/data/air.com.bigwigmedia.hotdogbush/air.com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
 
-    private string iOSDirectoryPath = "/Container/Library/Application Support/com.bigwigmedia.hotdogbush/Local Store";
-    private string iOSFilePath = "/Container/Library/Application Support/com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
     private string iOSApplicationSupportPath;
 
     private string directoryPath;

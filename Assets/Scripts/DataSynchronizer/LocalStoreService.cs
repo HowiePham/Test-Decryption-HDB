@@ -23,7 +23,6 @@ namespace HotDogBush.Infrastructure.Service
         private RC4 _rc4;
 
         private string _fileAndroidPath = $"/data/data/air.com.bigwigmedia.hotdogbush/air.com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
-        private string _fileIOSPath = $"/Container/Library/Application Support/com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
 
         // private string _filePath = $"D:/Unity/UnityProject/Test-SQLite/Assets/StreamingAssets/Local Store/hdb_next.sav";
         // private string _filePath = $"D:/Unity/UnityProject/Test-SQLite/Assets/StreamingAssets/Local Store/hdb_next_2.sav";
@@ -53,7 +52,12 @@ namespace HotDogBush.Infrastructure.Service
             else if (platform == RuntimePlatform.IPhonePlayer)
             {
                 _key = _keyIOS;
-                _filePath = _fileIOSPath;
+                var iOSApplicationSupportPath = IOSHelper.ConvertToApplicationSupportPath(Application.persistentDataPath);
+                Debug.Log($"--- (ROOT) Application Support Directory path: {iOSApplicationSupportPath}");
+                Debug.Log($"--- (ROOT) Exist Application Support? {Directory.Exists(iOSApplicationSupportPath)}");
+
+                var fileIOSPath = $"{iOSApplicationSupportPath}/com.bigwigmedia.hotdogbush/Local Store/hdb_next.sav";
+                _filePath = fileIOSPath;
             }
         }
 
